@@ -1,0 +1,274 @@
+#header .row {
+  height: 40px;
+}
+#header .row > div {
+  font-size: 12px;
+  text-align: center;
+  line-height: 40px;
+  border-right: 1px solid #ccc;
+  color: black;
+}
+#header .row > div > a {
+  color: black;
+}
+#header .row > div:last-child {
+  border: none;
+}
+#header .row > div:last-child > a {
+  width: 54px;
+  height: 34px;
+  font-size: 14px;
+  padding: 6px 12px;
+}
+#header .row > div .btn-danger {
+  background-color: #e92322;
+}
+#header .row > div:first-child {
+  position: relative;
+}
+#header .row > div .qrcode {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: none;
+}
+#header .row > div:first-child:hover .qrcode {
+  display: block;
+}
+#header .btn-primary {
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 14px;
+}
+#nav {
+  z-index: 3;
+  width: 100%;
+  top: 0;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+#nav .container .navbar-header .navbar-toggle {
+  margin: 23px 15px 23px 0;
+}
+#nav .container .navbar-header .navbar-brand {
+  color: #e92322;
+  font-size: 32px;
+  height: 80px;
+  line-height: 40px;
+}
+#nav .container .navbar-header .navbar-brand > i:last-child {
+  color: black;
+}
+#nav .container .navbar-collapse .navbar-nav a {
+  height: 80px;
+  line-height: 50px;
+}
+#nav .container .navbar-collapse .navbar-nav a:hover {
+  border-bottom: 3px solid red;
+}
+#slide .carousel-inner .pc-pic {
+  height: 410px;
+}
+#slide .carousel-inner .mobile-pic {
+  width: 100%;
+}
+#payment {
+  margin: 50px auto;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+#payment .row > div {
+  margin-bottom: 10px;
+}
+#payment .row > div > a {
+  text-decoration: none;
+  color: #666666;
+}
+#payment .row > div > a:hover {
+  color: #e92322;
+  text-decoration: none;
+}
+#booking {
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+#booking .left > span {
+  color: #e92322;
+}
+#booking .left > a {
+  color: #e92322;
+}
+#booking .left > a:hover {
+  text-decoration: none;
+}
+#booking .right > a:hover {
+  text-decoration: none;
+}
+#products {
+  background-color: #f0f0f0;
+}
+#products > .container {
+  padding: 30px;
+}
+#products > .container > .ul-slide {
+  overflow-x: auto;
+  width: 100%;
+}
+#products > .container > .ul-slide > ul {
+  width: 600px;
+}
+#products > .container > .ul-slide > ul > li > a {
+  background-color: transparent;
+  border: 0;
+  color: #000;
+  font-size: 16px;
+}
+#products > .container > .ul-slide > ul > li > a:hover {
+  border-bottom: 2px solid #e92322;
+  margin-bottom: -2px;
+}
+#products > .container > .tab-content > .tab-pane .product {
+  height: 160px;
+  background-color: #fff;
+  display: flex;
+  margin-top: 20px;
+}
+#products > .container > .tab-content > .tab-pane .product > .product-left {
+  flex: 1;
+  border-right: 1px dashed #f0f0f0;
+  position: relative;
+  text-align: center;
+  padding: 0 10px;
+}
+#products > .container > .tab-content > .tab-pane .product > .product-left > .content-left {
+  float: left;
+}
+#products > .container > .tab-content > .tab-pane .product > .product-left > .content-right {
+  float: right;
+}
+#products > .container > .tab-content > .tab-pane .product > .product-right {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#products > .container > .tab-content > .tab-pane .product > .product-right::before,
+#products > .container > .tab-content > .tab-pane .product > .product-right::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  background-color: #f0f0f0;
+}
+#products > .container > .tab-content > .tab-pane .product > .product-right::before {
+  top: -10px;
+}
+#products > .container > .tab-content > .tab-pane .product > .product-right::after {
+  bottom: -10px;
+}
+#products > .container > .tab-content > .tab-pane .product > .product-right > .tips {
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#products > .container > .tab-content > .tab-pane .product > .product-right > .tips .tips-left {
+  border: 1px solid #e92322;
+  color: #e92322;
+  font-size: 10px;
+  margin-left: 30px;
+  float: left;
+  background-color: #fff;
+}
+#products > .container > .tab-content > .tab-pane .product > .product-right > .tips .tips-right {
+  border: 1px solid #0f0;
+  color: #0f0;
+  font-size: 10px;
+  margin-right: 30px;
+  float: right;
+  background-color: #fff;
+}
+#products > .container > .tab-content > .tab-pane .product > .product-right > .rate1,
+#products > .container > .tab-content > .tab-pane .product > .product-right .rate2 {
+  text-align: center;
+  width: 100%;
+  height: 50%;
+}
+#products > .container > .tab-content > .tab-pane .product > .product-right > .rate1 {
+  padding-top: 40px;
+}
+#products > .container > .tab-content > .tab-pane .product > .product-right > .rate1 > strong {
+  font-size: 30px;
+}
+#products > .container > .tab-content > .tab-pane .product > .product-right > .rate2 {
+  padding-top: 10px;
+}
+#products > .container > .tab-content > .tab-pane .product.active {
+  background-color: #e92322;
+  color: #fff;
+  position: relative;
+}
+#products > .container > .tab-content > .tab-pane .product.active::before {
+  content: '\e915';
+  font-family: 'itcast';
+  position: absolute;
+  top: -6px;
+  left: 0;
+  font-size: 30px;
+}
+#news {
+  padding: 40px 0;
+}
+#news > .container > .content-L {
+  border-bottom: 1px dashed #f0f0f0;
+  position: relative;
+  text-align: center;
+}
+#news > .container > .content-L::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #f0f0f0;
+  position: absolute;
+  bottom: -5px;
+  right: -10px;
+}
+#news > .container > .content-M > .nav > li {
+  margin-bottom: 20px;
+}
+#news > .container > .content-M > .nav > li a {
+  border: 0;
+  font-size: 40px;
+  color: #f0f0f0;
+  border-radius: 50%;
+}
+#news > .container > .content-M > .nav > li a:hover {
+  background-color: #e92322;
+}
+#news > .container .content-R > .tab-content ul {
+  list-style: none;
+}
+#paterner > .container {
+  text-align: center;
+}
+#paterner > .container ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#paterner > .container ul a {
+  font-size: 50px;
+  color: #333333;
+  text-decoration: none;
+}
+#paterner > .container ul a:hover {
+  color: #e92322;
+}

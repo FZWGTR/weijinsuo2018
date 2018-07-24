@@ -1,0 +1,344 @@
+// 主题颜色
+@mainColor: #e92322;
+// 顶部通栏
+#header {
+    .row {
+        height: 40px;
+        >div {
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            border-right: 1px solid #ccc;
+            color: black;
+            >a {
+                color: black;
+            } // 最后一个div不要边框
+            &:last-child {
+                border: none;
+                >a {
+                    width: 54px;
+                    height: 34px;
+                    font-size: 14px;
+                    padding: 6px 12px;
+                }
+            } // 按钮颜色改为设置的主题色
+            .btn-danger {
+                background-color: @mainColor;
+            } // 二维码
+            // 第一个div，里面有二维码
+            &:first-child {
+                position: relative;
+            } // 二维码
+            .qrcode {
+                position: absolute;
+                top: 40px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 3;
+                display: none;
+            }
+            &:first-child:hover .qrcode {
+                display: block;
+            }
+        }
+    }
+    .btn-primary {
+        background-color: transparent;
+        border-color: transparent;
+        font-size: 14px;
+    }
+}
+
+// 导航栏
+#nav {
+    z-index: 3;
+    width: 100%;
+    top: 0;
+    margin-bottom: 0;
+    background-color: #fff;
+    .container {
+        .navbar-header {
+            // 手机端时出现
+            .navbar-toggle {
+                margin: 23px 15px 23px 0;
+            }
+            .navbar-brand {
+                color: @mainColor;
+                font-size: 32px;
+                height: 80px;
+                line-height: 40px;
+                >i:last-child {
+                    color: black;
+                }
+            }
+        }
+        .navbar-collapse {
+            .navbar-nav {
+                a {
+                    height: 80px;
+                    line-height: 50px;
+                    &:hover {
+                        border-bottom: 3px solid red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 轮播图
+#slide {
+    .carousel-inner {
+        .pc-pic {
+            // width: 100%;
+            height: 410px;
+        }
+        .mobile-pic {
+            width: 100%;
+        }
+    }
+}
+
+// 交易支付
+#payment {
+    margin: 50px auto;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    .row {
+        >div {
+            margin-bottom: 10px;
+            >a {
+                text-decoration: none;
+                color: #666666;
+                &:hover {
+                    color: @mainColor;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+// 预约区域
+#booking {
+    padding-bottom: 40px;
+    overflow: hidden;
+    .left {
+        >span {
+            color: @mainColor;
+        }
+        >a {
+            color: @mainColor;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    .right {
+        >a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// 商品区
+#products {
+    background-color: #f0f0f0; // 整体内部盒子
+    >.container {
+        padding: 30px; // 商品导航条区
+
+        // 控制滑动的盒子
+        >.ul-slide{
+            // 水平方向超出内容出现滚动条
+            overflow-x: auto;
+            width: 100%;
+            >ul {
+                // box-sizing: border-box;
+                width: 600px; // 每个单独的分页
+                >li {
+                    >a {
+                        // 背景色改为透明
+                        background-color: transparent;
+                        border: 0;
+                        color: #000;
+                        font-size: 16px; // 当前的a被选中时
+                        &:hover {
+                            border-bottom: 2px solid @mainColor;
+                            margin-bottom: -2px;
+                        }
+                    }
+                }
+            }
+        } // 商品内容区
+        >.tab-content {
+            // 内容小版块
+            >.tab-pane {
+                // 每个版块详细内容
+                .product {
+                    height: 160px;
+                    background-color: #fff;
+                    display: flex;
+                    margin-top: 20px; // 产品版块的左边部分
+                    >.product-left {
+                        flex: 1;
+                        border-right: 1px dashed #f0f0f0;
+                        position: relative;
+                        text-align: center;
+                        padding: 0 10px;
+                        >.content-left {
+                            float: left;
+                        }
+                        >.content-right {
+                            float: right;
+                        }
+                    } // 产品版块的右边部分
+                    >.product-right {
+                        width: 120px;
+                        display: flex;
+                        flex-direction: column; // 用伪元素设置虚线上的两个半圆
+                        position: relative;
+                        &::before,
+                        &::after {
+                            content: '';
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            position: absolute;
+                            left: -10px;
+                            background-color: #f0f0f0;
+                        }
+                        &::before {
+                            top: -10px;
+                        }
+                        &::after {
+                            bottom: -10px;
+                        } // 两个小提示，一红一绿
+                        >.tips {
+                            position: absolute;
+                            width: 100%;
+                            top: 20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            .tips-left {
+                                border: 1px solid @mainColor;
+                                color: @mainColor;
+                                font-size: 10px;
+                                margin-left: 30px;
+                                float: left;
+                                background-color: #fff;
+                            }
+                            .tips-right {
+                                border: 1px solid #0f0;
+                                color: #0f0;
+                                font-size: 10px;
+                                margin-right: 30px;
+                                float: right;
+                                background-color: #fff;
+                            }
+                        } // 利率上下两部分
+                        >.rate1,
+                        .rate2 {
+                            text-align: center;
+                            width: 100%;
+                            height: 50%;
+                        }
+                        >.rate1 {
+                            padding-top: 40px;
+                            >strong {
+                                font-size: 30px;
+                            }
+                        }
+                        >.rate2 {
+                            padding-top: 10px;
+                        }
+                    } // 第一个盒子变为红底，白字
+                    &.active {
+                        background-color: @mainColor;
+                        color: #fff;
+                        position: relative; // 左上角体验小标签
+                        &::before {
+                            //  为什么在H5中写了class不能生效这个图标
+                            content: '\e915'; // 怎么知道是这个字体???????
+                            font-family: 'itcast';
+                            position: absolute;
+                            top: -6px;
+                            left: 0;
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 新闻版块
+#news {
+    padding: 40px 0;
+    >.container {
+        // height: 600px;
+        // 全部新闻
+        >.content-L {
+            border-bottom: 1px dashed #f0f0f0;
+            position: relative;
+            text-align: center; // 下划线上的小圆点
+            &::after {
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px solid #f0f0f0;
+                position: absolute;
+                bottom: -5px;
+                right: -10px;
+            }
+        } // 大图标
+        >.content-M {
+            >.nav {
+                >li {
+                    margin-bottom: 20px;
+                    a {
+                        border: 0;
+                        font-size: 40px;
+                        color: #f0f0f0;
+                        border-radius: 50%;
+                        &:hover {
+                            background-color: @mainColor;
+                        }
+                    }
+                }
+            }
+        } // 详细内容
+        .content-R {
+            >.tab-content {
+                ul {
+                    list-style: none;
+                }
+            }
+        }
+    }
+}
+
+// 合作伙伴版块
+#paterner {
+    >.container {
+        text-align: center;
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            a {
+                font-size: 50px;
+                color: #333333;
+                text-decoration: none;
+                &:hover {
+                    color: @mainColor;
+                }
+            }
+        }
+    }
+}
